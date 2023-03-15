@@ -91,7 +91,7 @@ public class DataGroup {
         }
     }
 
-    public func verifyTag(_ tag: Int, oneOf expectedTags: Int...) throws {
+    public func verifyTag(_ tag: Int, oneOf expectedTags: [Int]) throws {
         if !expectedTags.contains(tag) {
             throw NFCPassportReaderError.InvalidResponse(
                 dataGroupId: datagroupType,

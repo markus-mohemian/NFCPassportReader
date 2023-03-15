@@ -74,7 +74,7 @@ func getImage() -> UIImage? {
         
         // Now we get to the good stuff - next tag is either 5F2E or 7F2E
         tag = try getNextTag()
-        try verifyTag(tag, oneOf: 0x5F2E, 0x7F2E)
+        try verifyTag(tag, oneOf: [0x5F2E, 0x7F2E])
         let value = try getNextValue()
         
         try parseISO19794_5( data:value )
